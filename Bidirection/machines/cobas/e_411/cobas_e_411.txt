@@ -1,0 +1,44 @@
+SERIAL CONNECTION
+
+Step-1 :- 
+        Install VS Code , Python 
+
+
+Step-2 :-
+        Setup all 4 files in one folder
+            [
+                1. registerPatientApi.py
+                2. helper.py
+                3. addReportInDatabase.py
+                4. c311.py
+            ]
+
+
+    --> In registerPatientApi file only add particular machine code, remove other machine code and also manage code to machine wise.
+    --> In registerPatientApi if get_patient_api route not required than remove.
+    --> In addReportInDatabase file only use particular machine function.
+
+Step-3 :- 
+        Setup mySQL 
+        
+        --> Install [https://dev.mysql.com/downloads/installer/]
+        --> setup mysql user and password
+
+Step-4 :-
+        Create Database
+
+        --> create_database_query [create databse lis]
+        --> [use lis;]
+        --> Create_table_query [create table machineData(machineName varchar(255),patientId varchar(255),test json);]
+        --> optional if you modify any entry [SET SQL_SAFE_UPDATES = 0;]
+
+Step-5 :- 
+        Create .exe using pyinstaller
+
+        --> pip install pyinstaller
+        --> pyinstaller --onefile {file_name}
+        --> update spec file [add file path in path and add import in hiddenimport]
+        --> pyinstaller {spec_file_name}
+
+
+Note :- set all route according to connection type
